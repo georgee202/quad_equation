@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение квадратного уравнения</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Решение квадратного уравнения</h1>
+        <p>Введите коэффициенты a, b и c для уравнения ax² + bx + c = 0:</p>
+        <form id="quadraticForm">
+            <label for="a">Коэффициент a:</label>
+            <input type="number" id="a" name="a" required>
+            
+            <label for="b">Коэффициент b:</label>
+            <input type="number" id="b" name="b" required>
+            
+            <label for="c">Коэффициент c:</label>
+            <input type="number" id="c" name="c" required>
+            
+            <button type="submit">Решить</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
