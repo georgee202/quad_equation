@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Решение квадратного уравнения</title>
+    <title>Калькулятор квадратных уравнений</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Решение квадратного уравнения</h1>
-        <p>Введите коэффициенты a, b и c для уравнения ax² + bx + c = 0:</p>
-        <form id="quadraticForm">
-            <label for="a">Коэффициент a:</label>
-            <input type="number" id="a" name="a" required>
+        <div class="card">
+            <h1>Калькулятор квадратных уравнений</h1>
+            <p class="subtitle">Введите коэффициенты <strong>a</strong>, <strong>b</strong> и <strong>c</strong>:</p>
+            <p class="equation">ax² + bx + c = 0</p>
             
-            <label for="b">Коэффициент b:</label>
-            <input type="number" id="b" name="b" required>
+            <form id="quadraticForm">
+                <div class="input-group">
+                    <label for="a">a:</label>
+                    <input type="number" id="a" name="a" step="any" required>
+                </div>
+                <div class="input-group">
+                    <label for="b">b:</label>
+                    <input type="number" id="b" name="b" step="any" required>
+                </div>
+                <div class="input-group">
+                    <label for="c">c:</label>
+                    <input type="number" id="c" name="c" step="any" required>
+                </div>
+                <button type="submit" class="solve-btn">Решить</button>
+            </form>
             
-            <label for="c">Коэффициент c:</label>
-            <input type="number" id="c" name="c" required>
-            
-            <button type="submit">Решить</button>
-        </form>
-        <div id="result"></div>
+            <div id="result" class="result-box"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
