@@ -15,6 +15,7 @@ body {
     width: 100%;
     max-width: 400px;
     padding: 20px;
+    box-sizing: border-box; /* Учитывает padding в ширине */
 }
 
 /* Карточка */
@@ -24,7 +25,8 @@ body {
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    margin: 0 auto; /* Центрирование */
+    width: 100%;
+    box-sizing: border-box; /* Фиксит отступы */
 }
 
 .card:hover {
@@ -64,17 +66,16 @@ label {
     font-weight: 600;
     color: #555;
     text-align: left;
-    padding-left: 5px; /* Выравнивание с полями ввода */
 }
 
 input {
-    width: calc(100% - 24px); /* Учет padding и border */
+    width: 100%;
     padding: 12px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     font-size: 16px;
     transition: border-color 0.3s ease;
-    margin: 0;
+    box-sizing: border-box; /* Фиксит ширину с учетом padding */
 }
 
 input:focus {
@@ -96,6 +97,7 @@ input:focus {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     margin-top: 10px;
+    box-sizing: border-box;
 }
 
 .solve-btn:hover {
@@ -118,17 +120,11 @@ input:focus {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    width: calc(100% - 30px); /* Учет padding */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .result-box.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Адаптивность */
-@media (max-width: 480px) {
-    .card {
-        padding: 20px;
-    }
 }
